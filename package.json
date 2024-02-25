@@ -1,0 +1,16 @@
+{
+    "name": "webcamx",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/electron/main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "npx electron-packager . --out=packages"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^25.3.2"
+    }
+}

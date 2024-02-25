@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+
+    overflow: hidden;
+    isolation: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 10px solid #fff;
+    border-radius: 50%;
+
+    -webkit-app-region: drag;
+}
+
+video {
+    height: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.select {
+    font-family: 'Open sans', sans-serif;
+    background: transparent;
+    color: #eee;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.select.active {
+    transform: initial;
+}
+
+.select option {
+    background: #131212;
+    color: #eee;
+    padding: 0.5rem;
+}
+
+svg {
+    width: 30px;
+    height: 20px;
+    transition: transform 0.6s ease;
+}
+
+svg > * {
+    fill: #fff;
+    transition: all 0.8s ease;
+}
+
+.device.active {
+    transform: rotate(90deg);
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-control {
+    display: grid;
+}
+
+.audio-control > svg {
+    display: block;
+    grid-area: 1/1;
+
+    opacity: 0;
+    visibility: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: opacity 0.6s ease;
+}
+.audio-control > svg.active {
+    opacity: 1;
+    visibility: visible;
+    appearance: initial;
+    -webkit-appearance: initial;
+}
